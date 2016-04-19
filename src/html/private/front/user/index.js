@@ -18,8 +18,8 @@ NEJ.define([
      * @extends {nej.ut._$$AbstractModuleLayoutSystem}
      * @param   {Object}  可选配置参数，已处理参数列表如下所示
      */
-    _p._$$FrontTag = _k._$klass();
-    _pro = _p._$$FrontTag._$extend(_m._$$Module);
+    _p._$$FrontUser = _k._$klass();
+    _pro = _p._$$FrontUser._$extend(_m._$$Module);
 
     /**
      * 构建模块
@@ -29,26 +29,23 @@ NEJ.define([
         this.__body = _e._$html2node(
             _l._$getTextTemplate('front-user')
         );
-        var _list = _e._$getByClassName(this.__body, 'j-flag');
-        this.__tbview = _t._$$TabView._$allocate({
-            list: _e._$getChildren(this.__body),
-            selected: 'active'
-        });
     };
 
-
-    _pro._checkTab = function(_event) {
-      _event.matched = _event.target == _event.source;
-    };
 
     _pro.__onRefresh = function (_options) {
         this.__super(_options);
-        this.__tbview._$match(_options.param.tab||'all');
+        var _list = _e._$getByClassName(this.__body, 'j-flag');
+        console.log(_list);
+        if (!!window.user) {
+
+        } else {
+            _list[0].innerHTML = (_l._$getTextTemplate('front-user-login-box'));
+        }
     };
 
     // notify dispatcher
     _m._$regist(
         'front-user',
-        _p._$$FrontTag
+        _p._$$FrontUser
     );
 });

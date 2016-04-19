@@ -27,9 +27,10 @@ NEJ.define([
                 'front-tab': "/?/front/tab/",
                 'front-list': '/?/front/list/',
                 'front-user': '/?/front/user/',
-                "topic" : '/m/topic/'
+                "topic" : '/m/topic/',
 
-                
+                //登录页面
+                'signin': '/m/signin/'
             }
         },
         // UMI 对应 模块实现文件
@@ -47,7 +48,9 @@ NEJ.define([
                 }
             },
 
-            '/m/topic/': 'm/topic/index.html'
+            '/m/topic/': 'm/topic/index.html',
+
+            '/m/signin/' : 'm/signin/index.html'
         }
     });
 
