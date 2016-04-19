@@ -27,6 +27,7 @@ NEJ.define([
                 'front-tab': "/?/front/tab/",
                 'front-list': '/?/front/list/',
                 'front-user': '/?/front/user/',
+                "topic" : '/m/topic/'
 
                 
             }
@@ -44,7 +45,9 @@ NEJ.define([
                     'list':'/?/front/list/',
                     'user':'/?/front/user/'
                 }
-            }
+            },
+
+            '/m/topic/': 'm/topic/index.html'
         }
     });
 

@@ -1,0 +1,18 @@
+<meta charset="utf-8" />
+<textarea name="txt" id="front-list">
+    <div>
+        <ul class="ui-list ui-list-graylink j-flag"><!--list--></ul>
+        <div class="j-flag"><!--pager--></div>
+    </div>
+</textarea>
+
+
+<textarea name="jst" id="front-list-tpl">
+    {list beg..end as y}
+        {var x=xlist[y]}
+        <li class="ui-list-item"><a href="#/m/topic/?id=${x.id}">${x.title}</a></li>
+    {/list}
+</textarea>
+
+
+<textarea name="js" data-src="./index.js"></textarea>

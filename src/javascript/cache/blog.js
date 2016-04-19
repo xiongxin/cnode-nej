@@ -30,6 +30,22 @@ NEJ.define([
 
     };
 
+    _pro._$getTopic = function (_id) {
+        _j._$request('https://cnodejs.org/api/v1/topic/'+_id, {
+            method: 'get',
+            type: 'json',
+            onload: this._onGetTopic._$bind(this),
+            onerror:function () {
+                alert('falid to get topic');
+                return
+            }
+        });
+    };
+    
+    _pro._onGetTopic = function (_data) {
+        if (_data.success) this.__topic = _data.data;
+    };
+
     _pro.__myload = function (_key,_callback,_data) {
         if (_data.success) {
             _data.total = 500;
