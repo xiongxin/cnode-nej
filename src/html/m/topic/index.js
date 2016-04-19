@@ -31,10 +31,12 @@ NEJ.define([
         this.__body = _e._$html2node(
             _l._$getTextTemplate('topic')
         );
-        
+
     };
     
     _pro.__onRefresh = function (_options) {
+        var _list = _e._$getByClassName(this.__body, 'j-flag');
+        _e._$clearChildren(_list[0]);  //一个问题需要先清除默认的html
         _e._$addClassName(this.__body, 'w-loading');
         this.__getTopic(_options.param.id);
     };

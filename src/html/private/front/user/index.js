@@ -27,7 +27,7 @@ NEJ.define([
      */
     _pro.__doBuild = function(){
         this.__body = _e._$html2node(
-            _l._$getTextTemplate('front-tab')
+            _l._$getTextTemplate('front-user')
         );
         var _list = _e._$getByClassName(this.__body, 'j-flag');
         this.__tbview = _t._$$TabView._$allocate({
@@ -48,7 +48,7 @@ NEJ.define([
 
     // notify dispatcher
     _m._$regist(
-        'front-tab',
+        'front-user',
         _p._$$FrontTag
     );
 });

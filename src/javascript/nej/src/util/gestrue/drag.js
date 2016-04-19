@@ -68,6 +68,8 @@ NEJ.define([
     _pro.__onTouchEnd = function(_event){
         
     };
+
+    return _p;
     
     
 });
