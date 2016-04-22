@@ -800,6 +800,7 @@ NEJ.define([
      * @return {Variable}        列表项
      */
     _pro._$getItemInCache = function(_id){
+        console.log(this.__getHash());
         return this.__getHash()[_id];
     };
     /**

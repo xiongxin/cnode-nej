@@ -100,8 +100,6 @@ NEJ.define([
             function(_node){
                 delete _event.matched;
                 _event.source = _e._$dataset(_node,this.__name);
-                //查询该节点是否匹配
-                // {target: '333', source: '111'或者'222'}
                 this._$dispatchEvent('oncheck',_event);
                 if (!_event.matched){
                     _e._$delClassName(_node,this.__selected);

@@ -13,8 +13,8 @@ NEJ.define([
     'base/event',
     'base/util',
     'ui/base',
-    'util/gestrue/tap',
-    'util/gestrue/drag',
+    'util/gesture/tap',
+    'util/gesture/drag',
     'util/animation/bounce',
     'util/animation/easeout',
     'util/animation/decelerate'

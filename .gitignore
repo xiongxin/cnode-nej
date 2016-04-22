@@ -2,3 +2,4 @@ pub
 deploy/*.log
 .idea/
 *.log
+cachedemo/

@@ -12,8 +12,8 @@ NEJ.define([
     'util/template/jst',
     'pro/base/module',
     'util/ajax/xdr',
-
-], function(_k,_e,_l, _j,_m, _x, _p,_pro){
+    'pro/cache/topic',
+], function(_k,_e,_l, _j,_m, _x, _t, _p,_pro){
     /**
      * 项目模块基类对象
      * @class   {wd.m._$$ModuleLayoutSystem}
@@ -32,13 +32,21 @@ NEJ.define([
             _l._$getTextTemplate('topic')
         );
 
+        this.__topicCache = _t._$$TopicCache._$allocate({
+            id:'topic',
+            key:'topic',
+            onitemload: this._itemLoad._$bind(this),
+        })
     };
-    
+    _pro._itemLoad = function (options) {
+        var item = this.__topicCache._$getItemInCache(options);
+        console.log(item);
+    };
     _pro.__onRefresh = function (_options) {
         var _list = _e._$getByClassName(this.__body, 'j-flag');
         _e._$clearChildren(_list[0]);  //一个问题需要先清除默认的html
         _e._$addClassName(this.__body, 'w-loading');
-        this.__getTopic(_options.param.id);
+        this.__topicCache._$getItem({id:'topic',key:'123'});
     };
 
     _pro.__getTopic = function (_id) {
